@@ -1,5 +1,7 @@
 package Task_animals;
 
+import java.time.LocalDate;
+
 public class PackAnimal extends Animal{
     protected  int id;
     protected String type_pa;
@@ -7,7 +9,7 @@ public class PackAnimal extends Animal{
     protected Boolean milk;
     protected Boolean wool;
 
-    public PackAnimal(int id, String type_a, String birth_date, String name_a, String type_pa, int transported_weight, Boolean milk, Boolean wool) {
+    public PackAnimal(int id, String type_a, LocalDate birth_date, String name_a, String type_pa, int transported_weight, Boolean milk, Boolean wool) {
         super(id, type_a, birth_date, name_a);
         this.type_pa = type_pa;
         this.transported_weight = transported_weight;
@@ -15,9 +17,23 @@ public class PackAnimal extends Animal{
         this.wool = wool;
     }
 
-    protected void toCaress() {
+    protected void cmdCaress() {
         System.out.println("Ласковый режим " + TYPE + " включен");
     }
+    public String getType_pa() {
+        return type_pa;
+    }
 
+    public int getTransported_weight() {
+        return transported_weight;
+    }
+
+    public boolean isMilk() {
+        return milk;
+    }
+
+    public boolean isWool() {
+        return wool;
+    }
 
 }
