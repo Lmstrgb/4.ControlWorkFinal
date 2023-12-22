@@ -1,15 +1,17 @@
 package Task_animals;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class PackAnimal extends Animal{
-    protected  int id;
+   // protected  int id;
     protected String type_pa;
     protected int transported_weight;
     protected Boolean milk;
     protected Boolean wool;
+    protected ArrayList<String> commands;
 
-    public PackAnimal(int id, String type_a, LocalDate birth_date, String name_a, String type_pa, int transported_weight, Boolean milk, Boolean wool) {
+    public PackAnimal(int id, String type_a, String birth_date, String name_a, String type_pa, int transported_weight, Boolean milk, Boolean wool) {
         super(id, type_a, birth_date, name_a);
         this.type_pa = type_pa;
         this.transported_weight = transported_weight;
@@ -35,5 +37,7 @@ public class PackAnimal extends Animal{
     public boolean isWool() {
         return wool;
     }
-
+    public  void addCmd(String command){
+        this.commands.add(command);
+    }
 }

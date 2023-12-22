@@ -1,6 +1,7 @@
 package Task_animals;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Pet extends Animal{
     //protected  int id;
@@ -9,8 +10,9 @@ public class Pet extends Animal{
     protected int smell;
     protected int noise;
 
+    protected ArrayList<String> commands;
 
-    public Pet(int id, String type_a, LocalDate birth_date, String name_a, String type_p, String breed, int smell, int noise) {
+    public Pet(int id, String type_a, String birth_date, String name_a, String type_p, String breed, int smell, int noise) {
         super(id, type_a, birth_date, name_a);
         this.type_p = type_p;
         this.breed = breed;
@@ -37,7 +39,12 @@ public class Pet extends Animal{
     public int getNoise() {
         return noise;
     }
+    public  void addCmd(String command){
+        this.commands.add(command);
+    }
 
-
+    public ArrayList<String> getCommands() {
+        return commands;
+    }
 
 }
