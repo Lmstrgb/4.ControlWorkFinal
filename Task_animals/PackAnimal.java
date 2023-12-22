@@ -1,6 +1,5 @@
 package Task_animals;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class PackAnimal extends Animal{
@@ -9,7 +8,7 @@ public class PackAnimal extends Animal{
     protected int transported_weight;
     protected Boolean milk;
     protected Boolean wool;
-    protected ArrayList<String> commands;
+    protected ArrayList<String> commands = new ArrayList<>();
 
     public PackAnimal(int id, String type_a, String birth_date, String name_a, String type_pa, int transported_weight, Boolean milk, Boolean wool) {
         super(id, type_a, birth_date, name_a);
@@ -40,4 +39,9 @@ public class PackAnimal extends Animal{
     public  void addCmd(String command){
         this.commands.add(command);
     }
+
+    public void getCommands() {
+        System.out.println(String.join(", ", commands));
+    }
+
 }

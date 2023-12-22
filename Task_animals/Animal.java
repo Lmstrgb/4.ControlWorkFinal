@@ -26,7 +26,7 @@ public class Animal {
         return type_a;
     }
 
-    public String getBirth_date() {
+    public String getBirthdate() {
         return birthDate;
     }
 
@@ -35,7 +35,7 @@ public class Animal {
     }
 
     public String toString() {
-        return "Id: " + id + "Name: "+ name_a + ", Type: " + TYPE;
+        return "Id: " + id + " Name: "+ name_a + ", Type: " + TYPE+ ", BirthDate: " + getBirthdate();
     }
 
 }
